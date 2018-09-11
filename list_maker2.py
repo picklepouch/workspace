@@ -1,6 +1,10 @@
+import os
 groceries = []
 print("Type help for assistance")
+def clear_screen():
+    os.system(cls if os.name == "nt" else clear)
 def list_items():
+    clear_screen()
     for items in groceries:
         print ("-", items)
 def remove_item():
@@ -10,6 +14,7 @@ def remove_item():
         groceries.remove(what_remove)
     except ValueError:
         pass
+    clear_screen()
     list_items()
 while True:
     new_item = input("Add item : ")
