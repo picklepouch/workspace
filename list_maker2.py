@@ -26,6 +26,7 @@ while True:
             To remove an item typer 'delete'
             To clear the list type 'CLEAR LIST'.
         """)
+        
     elif new_item.lower() == "list":
         print("Here is your list")
         list_items()
